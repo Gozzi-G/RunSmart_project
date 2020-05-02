@@ -33,7 +33,68 @@ $(document).ready(function () {
       });
    };
 
+   // function toogleSlide(item) {
+   //    $(item).each(function (i) {
+   //       $(this).on('click', function (e) {
+   //          e.preventDefault();
+   //          for (let q = 0; q < $(item).length; q++) {
+   //             if (q === i) {
+   //                continue;
+   //             }
+   //             $('.catalog-item__content').eq(q).addClass('catalog-item__content_active');
+   //             $('.catalog-item__list').eq(q).removeClass('catalog-item__list_active');
+   //          }
+   //          $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+   //          $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+   //       });
+   //    });
+   // }
+
    toogleSlide('.catalog-item__link');
    toogleSlide('.catalog-item__back');
+
+   // Modal
+
+   $('[data-modal=consultation').on('click', function () {
+      $('.overlay, #consultation').fadeIn("slow");
+   });
+   $(".modal__close").on("click", function () {
+      $(".overlay, #consultation, #thanks, #order").fadeOut("slow");
+   });
+
+   $(".button_mini").each(function (i) {
+      $(this).on("click", function () {
+         $("#order .modal__descr").text($(".catalog-item__subtitle").eq(i).text());
+         $(".overlay, #order").fadeIn("slow");
+      })
+   })
+
+   function validateForm(form) {
+      $(form).validate({
+         rules: {
+            name: "required",
+            phone: "required",
+            email: {
+               required: true,
+               email: true,
+            }
+         },
+
+         messages: {
+            name: "Пожалуйста, введите своё имя",
+            phone: "Пожалуйста, введите свой номер телефона",
+            email: {
+               required: "Пожалуйста, введите свой E-mail адресс",
+               email: "Неправильно введён адрес почты"
+            }
+         }
+      });
+   }
+
+   validateForm("#consultation-form");
+   validateForm("#order form");
+   validateForm("#consultation form");
+
+   $("input[name=phone]").mask("+7 (999) 999-99-99");
 
 });
