@@ -33,4 +33,12 @@
       }
    }
 
+   &__icon {
+      &_animated {
+         &:hover {
+            animation: heartbeat 1.5s ease infinite;
+         }
+      }
+   }
+
 }
