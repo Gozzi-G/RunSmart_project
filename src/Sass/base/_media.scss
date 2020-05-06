@@ -1,3 +1,76 @@
-@media (max-width: 998px) {
-   
+@media (max-width: 992px) {
+      .carousel {
+         .slick-dots {
+            text-align: center;
+            display: flex; // поставить кнопки в ряд;
+            justify-content: center; // выровнять по центру
+            list-style: none; // убираем черные маркеры
+         }
+         .slick-dots button {
+            background: #fff; // цвет фона
+            border: 1px solid $main-color; // без рамки
+            border-radius: 50%; // радиус закругления
+            height: 15px; // высота точки
+            width: 15px; // ширина точки
+            margin: 5px; // отступы между точками
+            outline: none; // убираем обводку
+            font-size: 0;
+        }
+        .slick-dots li[class="slick-active"] button {
+         background: $main-color;
+     }
+     }
+}
+
+@media (max-width: 767px) {
+   .promo {
+      // max-width: 768px;
+      // max-height: 650px;
+      padding: 21px 0 93px 0;
+      background-image: url(../img/main.jpg);
+      background-position: center center; 
+  }
+  .container {
+      position: relative;
+      // max-width: 768px;
+      margin: 0 auto;
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+  .consultation {
+      padding: 90px 0 90px 0;;
+      .container {
+          padding-left: 50px;
+      }
+      &__descr {
+         margin-top: 60px;
+      }
+      .error {
+         border: 1px solid red;
+      }
+      label.error {
+         color: #fff;
+         border: none;
+         text-align: center;
+         margin-bottom: 15px;
+         font-size: 14px;
+      }
+   }
+   //  .carousel {
+   //     .slick-dots {
+   //        text-align: center;
+   //        display: flex; // поставить кнопки в ряд;
+   //        justify-content: center; // выровнять по центру
+   //        list-style: none; // убираем черные маркеры
+   //     }
+   //     .slick-dots button {
+   //        background: #eddfd477; // цвет фона
+   //        border: 1px solid black; // без рамки
+   //        border-radius: 50%; // радиус закругления
+   //        height: 15px; // высота точки
+   //        width: 15px; // ширина точки
+   //        margin: 5px; // отступы между точками
+   //        outline: none; // убираем обводку
+   //    }  
+   // }
 }
