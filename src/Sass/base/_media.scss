@@ -1,76 +1,233 @@
 @media (max-width: 992px) {
-      .carousel {
-         .slick-dots {
-            text-align: center;
-            display: flex; // поставить кнопки в ряд;
-            justify-content: center; // выровнять по центру
-            list-style: none; // убираем черные маркеры
-         }
-         .slick-dots button {
-            background: #fff; // цвет фона
-            border: 1px solid $main-color; // без рамки
-            border-radius: 50%; // радиус закругления
-            height: 15px; // высота точки
-            width: 15px; // ширина точки
-            margin: 5px; // отступы между точками
-            outline: none; // убираем обводку
-            font-size: 0;
-        }
-        .slick-dots li[class="slick-active"] button {
-         background: $main-color;
-     }
-     }
-}
-
-@media (max-width: 767px) {
    .promo {
-      // max-width: 768px;
-      // max-height: 650px;
-      padding: 21px 0 93px 0;
+      padding: 21px 0 60px 0;
       background-image: url(../img/main.jpg);
-      background-position: center center; 
-  }
-  .container {
+      background-position: center center;
+      &__header {
+         font-size: 40px;
+      }
+      &__subheader {
+         font-size: 22px;
+      }
+   }
+   .container {
       position: relative;
-      // max-width: 768px;
+      // min-width: 768px;
       margin: 0 auto;
       padding-left: 20px;
       padding-right: 20px;
-  }
-  .consultation {
-      padding: 90px 0 90px 0;;
-      .container {
-          padding-left: 50px;
-      }
+   }
+   .advantages {
+      padding: 60px 0 75px 0;
+   }
+   .consultation {
+      padding: 70px 0 70px 0;
       &__descr {
          margin-top: 60px;
       }
-      .error {
-         border: 1px solid red;
-      }
-      label.error {
+   }
+   .title {
+      &_left {
          color: #fff;
-         border: none;
-         text-align: center;
-         margin-bottom: 15px;
-         font-size: 14px;
+         font-size: 31px;
       }
    }
-   //  .carousel {
-   //     .slick-dots {
-   //        text-align: center;
-   //        display: flex; // поставить кнопки в ряд;
-   //        justify-content: center; // выровнять по центру
-   //        list-style: none; // убираем черные маркеры
-   //     }
-   //     .slick-dots button {
-   //        background: #eddfd477; // цвет фона
-   //        border: 1px solid black; // без рамки
-   //        border-radius: 50%; // радиус закругления
-   //        height: 15px; // высота точки
-   //        width: 15px; // ширина точки
-   //        margin: 5px; // отступы между точками
-   //        outline: none; // убираем обводку
-   //    }  
+
+   .carousel {
+      padding: 65px 0;
+      &__inner {
+         img {
+            max-width: 80%;
+            margin: 0 auto;
+         }
+      }
+      .slick-dots {
+         margin-top: 15px;
+         text-align: center;
+         display: flex; // поставить кнопки в ряд;
+         justify-content: center; // выровнять по центру
+         list-style: none; // убираем черные маркеры
+      }
+      .slick-dots button {
+         background: #fff; // цвет фона
+         border: 1px solid $main-color; // без рамки
+         border-radius: 50%; // радиус закругления
+         height: 15px; // высота точки
+         width: 15px; // ширина точки
+         margin: 5px; // отступы между точками
+         outline: none; // убираем обводку
+         font-size: 0;
+      }
+      .slick-dots li[class="slick-active"] button {
+      background: $main-color;
+   }
+   }
+
+   .catalog {
+      padding-bottom: 50px;
+      &__tabs {
+         margin-top: 45px;
+      }
+      &__content {
+         justify-content: space-evenly;
+      }
+   }
+
+   .reviews {
+      &__wraper {
+         padding-left: 20px;
+      }
+      &__user {
+         display: flex;
+         margin-top: 75px;
+
+         &:nth-child(1) {
+            margin-top: 0;
+         }
+      }
+      &__name {
+         font-size: 17px;
+      } 
+      &__subtitle {
+         font-size: 15px;
+      }
+      &__text {
+         font-size: 15px;
+      }
+      &__photo {
+         img {
+            max-width: 150px;
+         }
+      } 
+   }
+
+   .footer {
+      height: 400px;
+      position: relative;
+      &__info {
+         position: absolute;
+         top: 0;
+         left: 100%;
+         transform: translateX(-100%);
+         max-width: 345px;
+         max-height: 170px;
+         background-color: $main-color;
+         padding: 23px 40px 23px 40px;
+      }
+      &__adress {
+         font-size: 16px;
+         margin-bottom: 20px;
+         text-align: center;
+      }
+      &__phone {
+         font-size: 18px;
+         margin-bottom: 20px;
+         text-align: center;
+      }
+      &__social-item {
+         width: 35px;
+         height: 35px;
+         img {
+            height: 20px;
+         }
+      }
+      iframe {
+         height: 400px;
+      }
+   }
+   
+}
+
+@media (max-width: 576px) {
+   // body {
+   //   min-width: 768px;
    // }
+   .header {
+      position: relative;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+
+      &__logo {
+         width: 350px;
+         img {
+            width: 100%;
+         }
+      }
+      &__official {
+         display: none;
+      }
+      .button {
+         width: 274px;
+         height: 50px;
+         font-size: 20px;
+      }
+      &__phone {
+         font-size: 29px;
+      }
+      &__contacts {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-end;
+      }
+   }
+   .promo {
+      &__wrapper {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin-top: 70px;
+      }
+
+      &__header {
+         font-size: 42px;
+      }
+
+      &__subheader {
+         margin-top: 17px;
+         color: #ffffff;
+         font-size: 24px;
+         line-height: 24px;
+         font-weight: 500;
+         text-transform: uppercase;
+      }
+
+      &__icons {
+         display: none;
+      }
+
+      &__icon {
+         margin-top: 50px;
+         width: 108px;
+         text-align: center;
+         color: #ffffff;
+         font-size: 14px;
+         font-weight: 500;
+
+         img {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+         }
+      }
+
+      &__link {
+         margin-top: 18px;
+         color: #ffffff;
+         font-size: 16px;
+         font-weight: 500;
+
+         a {
+            text-transform: uppercase;
+            text-decoration: underline;
+            color: #fff;
+
+            &:hover {
+               color: #fff;
+               text-decoration: none;
+            }
+         }
+      }
+   }
 }
